@@ -1,0 +1,73 @@
+name: nature-polishing
+version: 6.1.0
+description: >
+  Declarative manifest for routing Nature-style polishing requests.
+
+always_load:
+  - ../_shared/core/reader-workflow.md
+  - ../_shared/core/paper-type-taxonomy.md
+  - ../_shared/core/ethics.md
+  - ../_shared/core/terminology-ledger.md
+  - static/core/stance.md
+  - static/core/failure-modes.md
+  - static/core/output-format.md
+
+axes:
+  paper_type:
+    detect: |
+      Decide what kind of paper or section is being polished. Default to research.
+    values:
+      research: static/fragments/paper_type/research.md
+      methods: static/fragments/paper_type/methods.md
+      hypothesis: static/fragments/paper_type/hypothesis.md
+      algorithmic: static/fragments/paper_type/algorithmic.md
+      review: static/fragments/paper_type/review.md
+    default: research
+    multi: false
+
+  section:
+    detect: |
+      Identify which section(s) the user wants polished.
+    values:
+      abstract: static/fragments/section/abstract.md
+      intro: static/fragments/section/intro.md
+      results: static/fragments/section/results.md
+      discussion: static/fragments/section/discussion.md
+      conclusion: static/fragments/section/conclusion.md
+      title: static/fragments/section/title.md
+      methods: static/fragments/section/methods.md
+    multi: true
+
+  language:
+    detect: |
+      Use zh-to-en when the draft is Chinese or strongly Chinese-influenced English.
+    values:
+      en: static/fragments/language/en.md
+      zh-to-en: static/fragments/language/zh-to-en.md
+    default: en
+    multi: false
+
+  journal:
+    detect: |
+      Use nature for Nature or Nature-family journals, nat-comms for Nature Communications, otherwise generic.
+    values:
+      nature: static/fragments/journal/nature.md
+      nat-comms: static/fragments/journal/nat-comms.md
+      generic: static/fragments/journal/generic.md
+    default: generic
+    multi: false
+
+references:
+  on_demand:
+    - condition: needs Nature/Nature Communications article-level patterns
+      path: references/published-article-patterns.md
+    - condition: needs section-specific move orders or phrase patterns
+      path: references/section-moves.md
+    - condition: needs hedging, transition, evidence, limitation, future-work phrases
+      path: references/phrasebank-playbook.md
+    - condition: needs academic style, register, article use, or mechanics checks
+      path: references/style-guardrails.md
+    - condition: needs deeper writing-strategy principles
+      path: references/writing-strategy.md
+    - condition: needs LaTeX layout/typesetting help
+      path: references/latex-layout.md
