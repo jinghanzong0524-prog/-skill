@@ -1,0 +1,31 @@
+{
+  "name": "nature-polishing",
+  "version": "6.1.0",
+  "description": "Nature-style academic writing polishing skill that polishes, restructures, or translates scientific prose using structured writing principles and curated Nature article patterns.",
+  "author": {
+    "name": "Yuan1z0825",
+    "url": "https://github.com/Yuan1z0825"
+  },
+  "homepage": "https://github.com/jinghanzong0524-prog/-skill",
+  "repository": "https://github.com/jinghanzong0524-prog/-skill",
+  "license": "MIT",
+  "keywords": ["nature", "polishing", "academic", "writing"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Nature Polishing",
+    "shortDescription": "Polish academic prose in the style of Nature and Nature Communications",
+    "longDescription": "Use this skill to polish, restructure, or translate scientific writing into concise Nature-leaning English. It uses structured writing strategies, curated Nature/Nature Communications article patterns, and a phrasebank to improve clarity and adherence to journal conventions. It also includes tools for LaTeX float layout fixes.",
+    "developerName": "jinghanzong0524-prog",
+    "category": "Research",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "defaultPrompt": [
+      "Polish this abstract in Nature style.",
+      "Improve the clarity of this introduction.",
+      "Fix the LaTeX layout for this figure page."
+    ],
+    "websiteURL": "https://github.com/jinghanzong0524-prog/-skill",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "brandColor": "#2563EB"
+  }
+}
